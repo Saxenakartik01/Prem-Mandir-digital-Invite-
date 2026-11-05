@@ -1,0 +1,275 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 76" width="100%" height="auto" fill="none" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="goldBorderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cca353" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#caa14e" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#fae9b8" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#caa14e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#cca353" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="goldLightGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7dd"/>
+      <stop offset="50%" stop-color="#f3dda0"/>
+      <stop offset="100%" stop-color="#caa14e"/>
+    </linearGradient>
+    <linearGradient id="archFillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fcf8eb" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f5e5be" stop-opacity="0.75"/>
+    </linearGradient>
+    <radialGradient id="pearlGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#faecc5"/>
+      <stop offset="100%" stop-color="#b38531"/>
+    </radialGradient>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff6db"/>
+      <stop offset="50%" stop-color="#dcb25b"/>
+      <stop offset="100%" stop-color="#8b5e19"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Top hairline border -->
+  <line x1="20" y1="20" x2="580" y2="20" stroke="url(#goldBorderGrad)" stroke-width="1.2"/>
+  <!-- Guide dots -->
+  <line x1="50" y1="24" x2="550" y2="24" stroke="url(#goldBorderGrad)" stroke-width="0.75" stroke-dasharray="2 4" opacity="0.7"/>
+
+  <!-- Repeating Jharokha Arches -->
+  
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 0 34 
+                   C 8 44, 18 44, 25 39 
+                   C 33 51, 45 55, 50 48 
+                   C 55 55, 67 51, 75 39 
+                   C 82 44, 92 44, 100 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 4 36 
+                   C 10 43, 18 43, 25 40 
+                   C 32 48, 45 51, 50 46 
+                   C 55 51, 68 48, 75 40 
+                   C 82 43, 90 43, 96 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="50" y1="48" x2="50" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="50" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="49.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="25" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="75" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="50" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 100 34 
+                   C 108 44, 118 44, 125 39 
+                   C 133 51, 145 55, 150 48 
+                   C 155 55, 167 51, 175 39 
+                   C 182 44, 192 44, 200 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 104 36 
+                   C 110 43, 118 43, 125 40 
+                   C 132 48, 145 51, 150 46 
+                   C 155 51, 168 48, 175 40 
+                   C 182 43, 190 43, 196 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="150" y1="48" x2="150" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="150" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="149.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="125" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="175" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="150" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 200 34 
+                   C 208 44, 218 44, 225 39 
+                   C 233 51, 245 55, 250 48 
+                   C 255 55, 267 51, 275 39 
+                   C 282 44, 292 44, 300 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 204 36 
+                   C 210 43, 218 43, 225 40 
+                   C 232 48, 245 51, 250 46 
+                   C 255 51, 268 48, 275 40 
+                   C 282 43, 290 43, 296 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="250" y1="48" x2="250" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="250" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="249.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="225" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="275" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="250" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 300 34 
+                   C 308 44, 318 44, 325 39 
+                   C 333 51, 345 55, 350 48 
+                   C 355 55, 367 51, 375 39 
+                   C 382 44, 392 44, 400 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 304 36 
+                   C 310 43, 318 43, 325 40 
+                   C 332 48, 345 51, 350 46 
+                   C 355 51, 368 48, 375 40 
+                   C 382 43, 390 43, 396 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="350" y1="48" x2="350" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="350" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="349.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="325" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="375" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="350" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 400 34 
+                   C 408 44, 418 44, 425 39 
+                   C 433 51, 445 55, 450 48 
+                   C 455 55, 467 51, 475 39 
+                   C 482 44, 492 44, 500 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 404 36 
+                   C 410 43, 418 43, 425 40 
+                   C 432 48, 445 51, 450 46 
+                   C 455 51, 468 48, 475 40 
+                   C 482 43, 490 43, 496 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="450" y1="48" x2="450" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="450" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="449.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="425" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="475" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="450" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+        <g>
+          <!-- Jharokha arch frame -->
+          <path d="M 500 34 
+                   C 508 44, 518 44, 525 39 
+                   C 533 51, 545 55, 550 48 
+                   C 555 55, 567 51, 575 39 
+                   C 582 44, 592 44, 600 34" 
+                fill="url(#archFillGrad)" 
+                stroke="url(#goldBorderGrad)" 
+                stroke-width="1.4" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"/>
+          <!-- Fine inner foil -->
+          <path d="M 504 36 
+                   C 510 43, 518 43, 525 40 
+                   C 532 48, 545 51, 550 46 
+                   C 555 51, 568 48, 575 40 
+                   C 582 43, 590 43, 596 36" 
+                fill="none" 
+                stroke="url(#goldLightGrad)" 
+                stroke-width="0.75" 
+                opacity="0.7"/>
+          <!-- Hanging pearl strand -->
+          <line x1="550" y1="48" x2="550" y2="62" stroke="url(#goldBorderGrad)" stroke-width="0.9" stroke-dasharray="1 2"/>
+          <circle cx="550" cy="65" r="2.8" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.5"/>
+          <circle cx="549.2" cy="64" r="0.9" fill="#ffffff" opacity="0.9"/>
+          <!-- Cusp joints pearls -->
+          <circle cx="525" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <circle cx="575" cy="41" r="1.6" fill="url(#pearlGrad)"/>
+          <!-- Floral bud in center -->
+          <circle cx="550" cy="40" r="1.8" fill="url(#goldLightGrad)"/>
+        </g>
+
+  <!-- Grand Central Royal Crest (Mandala & Lotus) at (300, 20) -->
+  <g transform="translate(300, 20)">
+    <!-- Filigree scroll wings left -->
+    <path d="M -12 -2 C -35 -14, -65 -12, -90 -2 C -105 5, -120 0, -135 -6 M -65 -12 C -73 -18, -88 -18, -96 -11 M -35 -14 C -43 -20, -55 -20, -62 -14" 
+          stroke="url(#goldBorderGrad)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <circle cx="-96" cy="-11" r="1.6" fill="url(#pearlGrad)"/>
+    <circle cx="-62" cy="-14" r="1.5" fill="url(#pearlGrad)"/>
+    <circle cx="-135" cy="-6" r="1.8" fill="url(#pearlGrad)"/>
+
+    <!-- Filigree scroll wings right -->
+    <path d="M 12 -2 C 35 -14, 65 -12, 90 -2 C 105 5, 120 0, 135 -6 M 65 -12 C 73 -18, 88 -18, 96 -11 M 35 -14 C 43 -20, 55 -20, 62 -14" 
+          stroke="url(#goldBorderGrad)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <circle cx="96" cy="-11" r="1.6" fill="url(#pearlGrad)"/>
+    <circle cx="62" cy="-14" r="1.5" fill="url(#pearlGrad)"/>
+    <circle cx="135" cy="-6" r="1.8" fill="url(#pearlGrad)"/>
+
+    <!-- Center Medallion Base / Halo -->
+    <circle cx="0" cy="0" r="13" fill="#fffdf6" stroke="url(#goldBorderGrad)" stroke-width="1.3"/>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="url(#goldLightGrad)" stroke-width="0.7" stroke-dasharray="1.5 2"/>
+
+    <!-- Blooming Royal Lotus Petals -->
+    <!-- Upright center petal -->
+    <path d="M 0 -11 C -2.5 -6, -3 0, 0 2.5 C 3 0, 2.5 -6, 0 -11 Z" fill="url(#crestGrad)"/>
+    <!-- Left petals -->
+    <path d="M -1.5 -9.5 C -6 -6, -8 0, -2.5 2.5 C -0.8 0.8, 0 -5, -1.5 -9.5 Z" fill="url(#crestGrad)" opacity="0.9"/>
+    <path d="M -2.5 -5 C -9 -2.5, -9.5 3, -3 4.5 C -1.5 2, -0.8 0, -2.5 -5 Z" fill="url(#crestGrad)" opacity="0.8"/>
+    <!-- Right petals -->
+    <path d="M 1.5 -9.5 C 6 -6, 8 0, 2.5 2.5 C 0.8 0.8, 0 -5, 1.5 -9.5 Z" fill="url(#crestGrad)" opacity="0.9"/>
+    <path d="M 2.5 -5 C 9 -2.5, 9.5 3, 3 4.5 C 1.5 2, 0.8 0, 2.5 -5 Z" fill="url(#crestGrad)" opacity="0.8"/>
+
+    <!-- Center pearl gem -->
+    <circle cx="0" cy="0" r="3" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.7"/>
+    <circle cx="-0.7" cy="-0.8" r="0.9" fill="#ffffff" opacity="0.9"/>
+
+    <!-- Hanging center pendant drop -->
+    <line x1="0" y1="13" x2="0" y2="22" stroke="url(#goldBorderGrad)" stroke-width="1"/>
+    <circle cx="0" cy="25" r="3.2" fill="url(#pearlGrad)" stroke="#9e7428" stroke-width="0.7"/>
+    <circle cx="-0.8" cy="24" r="1" fill="#ffffff" opacity="0.9"/>
+  </g>
+</svg>

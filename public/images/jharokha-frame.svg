@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 360" width="280" height="360">
+  <defs>
+    <linearGradient id="goldRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff2d6" />
+      <stop offset="25%" stop-color="#dfba73" />
+      <stop offset="50%" stop-color="#f7e2a9" />
+      <stop offset="75%" stop-color="#b88a38" />
+      <stop offset="100%" stop-color="#8f6219" />
+    </linearGradient>
+    <linearGradient id="marbleFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f0e1" />
+      <stop offset="50%" stop-color="#eedfc4" />
+      <stop offset="100%" stop-color="#d8c29d" />
+    </linearGradient>
+    <linearGradient id="innerBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#134e3f" />
+      <stop offset="100%" stop-color="#082820" />
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Outer Marble Carved Arch with Shadow -->
+  <path d="M 140 12 C 134 20, 126 26, 116 30 C 105 24, 93 32, 85 44 C 73 40, 58 53, 50 70 C 40 78, 26 98, 22 122 L 22 336 A 16 16 0 0 0 38 352 L 242 352 A 16 16 0 0 0 258 336 L 258 122 C 254 98, 240 78, 230 70 C 222 53, 207 40, 195 44 C 187 32, 175 24, 164 30 C 154 26, 146 20, 140 12 Z"
+        fill="url(#marbleFrame)" stroke="url(#goldRim)" stroke-width="3" filter="url(#cardShadow)" />
+
+  <!-- Inner Gold Inset Rim -->
+  <path d="M 140 22 C 135 29, 129 34, 120 38 C 111 32, 101 39, 94 49 C 84 46, 71 57, 64 72 C 55 79, 42 97, 38 120 L 38 326 A 10 10 0 0 0 48 336 L 232 336 A 10 10 0 0 0 242 326 L 242 120 C 238 97, 225 79, 216 72 C 209 57, 196 46, 186 49 C 179 39, 169 32, 160 38 C 151 34, 145 29, 140 22 Z"
+        fill="url(#innerBg)" stroke="url(#goldRim)" stroke-width="1.5" />
+</svg>
