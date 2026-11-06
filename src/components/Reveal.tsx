@@ -25,7 +25,6 @@ export default function Reveal({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const phoneContainer = document.getElementById("phone-screen");
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -36,7 +35,7 @@ export default function Reveal({
         });
       },
       {
-        root: phoneContainer || null,
+        root: null,
         threshold: 0.08,
         rootMargin: "0px 0px -4% 0px",
       }

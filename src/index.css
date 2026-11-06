@@ -2,6 +2,12 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-sm: 99999px;
+  --breakpoint-md: 99999px;
+  --breakpoint-lg: 99999px;
+  --breakpoint-xl: 99999px;
+  --breakpoint-2xl: 99999px;
+
   --font-script: "Alex Brush", cursive;
   --font-serif: "Cormorant Garamond", "Georgia", serif;
   --font-display: "Marcellus", "Georgia", serif;
@@ -313,7 +319,7 @@ body {
 .music-player-wrap {
   position: fixed;
   bottom: max(clamp(18px, 3.5svh, 28px), calc(env(safe-area-inset-bottom, 0px) + 14px));
-  right: max(18px, calc(env(safe-area-inset-right, 0px) + 18px));
+  right: max(18px, calc(50vw - 215px + 18px));
   z-index: 95;
   pointer-events: none;
   opacity: 0;

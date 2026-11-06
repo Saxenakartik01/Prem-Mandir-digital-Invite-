@@ -8,30 +8,10 @@ export interface HeroIntroProps {
 }
 
 export default function HeroIntro({ onIntroEnd }: HeroIntroProps = {}) {
-  // Check if viewport is desktop/laptop (>= 768px)
-  const [isDesktop, setIsDesktop] = useState(() => {
-    return typeof window !== "undefined" && window.innerWidth >= 768;
-  });
-
-  // false = Intro showing, true = Hero showing
-  // On desktop and laptop, intro phone video is removed and Hero shows immediately
-  const [showHero, setShowHero] = useState(() => {
-    return typeof window !== "undefined" && window.innerWidth >= 768;
-  });
+  // false = Intro showing, true = Hero showing (consistent mobile experience across all devices)
+  const [showHero, setShowHero] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const desktop = window.innerWidth >= 768;
-      setIsDesktop(desktop);
-      if (desktop) {
-        setShowHero(true);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   // Notify parent whenever intro ends
   useEffect(() => {
@@ -71,9 +51,9 @@ export default function HeroIntro({ onIntroEnd }: HeroIntroProps = {}) {
     setShowHero(true);
   };
 
-  // Handle touch and wheel to trigger the video entrance when user tries to scroll down (mobile only)
+  // Handle touch and wheel to trigger the video entrance when user tries to scroll down
   useEffect(() => {
-    if (isDesktop || showHero || isPlaying) return;
+    if (showHero || isPlaying) return;
 
     let touchStartY = 0;
 
@@ -196,62 +176,60 @@ export default function HeroIntro({ onIntroEnd }: HeroIntroProps = {}) {
       </section>
 
       {/* =========================================================================
-          INTRO LAYER (Intro-page.mp4: mobile entrance video, removed on desktop & laptop)
+          INTRO LAYER (Intro-page.mp4: entrance video consistent across mobile and desktop)
           ========================================================================= */}
-      {!isDesktop && (
-        <section
-          aria-label="Sacred Temple Entrance"
-          onClick={handleClick}
+      <section
+        aria-label="Sacred Temple Entrance"
+        onClick={handleClick}
+        className={cn(
+          "absolute inset-0 z-30 flex flex-col overflow-hidden transition-opacity duration-1000 ease-in-out cursor-pointer",
+          showHero ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+        )}
+      >
+        {/* Intro Video Background */}
+        <div className="absolute inset-0 overflow-hidden bg-black">
+          <video
+            ref={videoRef}
+            playsInline
+            preload="auto"
+            poster="images/temple-intro.jpg"
+            onEnded={handleVideoEnded}
+            className="h-full w-full object-cover object-center"
+          >
+            <source src="images/Intro-page.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* Center: "Welcome to The Wedding" (Uniform royal gold display text, no dark background shadow) */}
+        <div
           className={cn(
-            "absolute inset-0 z-30 flex flex-col overflow-hidden transition-opacity duration-1000 ease-in-out cursor-pointer",
-            showHero ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"
+            "relative z-10 my-auto flex flex-col items-center justify-center px-4 pt-16 text-center select-none transition-all duration-700 pointer-events-none",
+            isPlaying ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"
           )}
         >
-          {/* Intro Video Background */}
-          <div className="absolute inset-0 overflow-hidden bg-black">
-            <video
-              ref={videoRef}
-              playsInline
-              preload="auto"
-              poster="images/temple-intro.jpg"
-              onEnded={handleVideoEnded}
-              className="h-full w-full object-cover object-center"
-            >
-              <source src="images/Intro-page.mp4" type="video/mp4" />
-            </video>
-          </div>
+          <h1 className="font-display text-xs xs:text-sm uppercase tracking-[0.34em] font-extrabold text-[#8a5b17] drop-shadow-[0_1.5px_2px_rgba(255,255,255,1)] sm:text-base select-none">
+            Welcome to The Wedding
+          </h1>
+        </div>
 
-          {/* Center: "Welcome to The Wedding" (Uniform royal gold display text, no dark background shadow) */}
-          <div
-            className={cn(
-              "relative z-10 my-auto flex flex-col items-center justify-center px-4 pt-16 text-center select-none transition-all duration-700 pointer-events-none",
-              isPlaying ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"
-            )}
+        {/* Bottom subtle entrance button (fades out when video starts playing) */}
+        <div
+          className={cn(
+            "relative z-10 mt-auto flex items-end justify-center pb-6 sm:pb-9 transition-all duration-500",
+            isPlaying ? "opacity-0 translate-y-4 pointer-events-none" : "opacity-100 translate-y-0"
+          )}
+        >
+          <button
+            onClick={handleClick}
+            className="pulse-gold group flex items-center gap-3 rounded-full border-2 border-gold-400 bg-gradient-to-r from-[#fffefc] via-[#fffcf5] to-[#fbf3e0] px-8 py-3.5 font-display text-xs sm:text-sm uppercase tracking-[0.28em] text-[#3d240c] font-bold shadow-[0_8px_24px_rgba(140,95,30,0.2)] backdrop-blur-sm transition-all duration-300 hover:bg-[#ffffff] hover:border-gold-300 hover:scale-105 active:scale-95 cursor-pointer"
           >
-            <h1 className="font-display text-xs xs:text-sm uppercase tracking-[0.34em] font-extrabold text-[#8a5b17] drop-shadow-[0_1.5px_2px_rgba(255,255,255,1)] sm:text-base select-none">
-              Welcome to The Wedding
-            </h1>
-          </div>
-
-          {/* Bottom subtle entrance button (fades out when video starts playing) */}
-          <div
-            className={cn(
-              "relative z-10 mt-auto flex items-end justify-center pb-6 sm:pb-9 transition-all duration-500",
-              isPlaying ? "opacity-0 translate-y-4 pointer-events-none" : "opacity-100 translate-y-0"
-            )}
-          >
-            <button
-              onClick={handleClick}
-              className="pulse-gold group flex items-center gap-3 rounded-full border-2 border-gold-400 bg-gradient-to-r from-[#fffefc] via-[#fffcf5] to-[#fbf3e0] px-8 py-3.5 font-display text-xs sm:text-sm uppercase tracking-[0.28em] text-[#3d240c] font-bold shadow-[0_8px_24px_rgba(140,95,30,0.2)] backdrop-blur-sm transition-all duration-300 hover:bg-[#ffffff] hover:border-gold-300 hover:scale-105 active:scale-95 cursor-pointer"
-            >
-              <span>Tap to Enter</span>
-              <svg viewBox="0 0 24 24" className="h-4 w-4 text-gold-700 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14m-6-6 6 6-6 6" />
-              </svg>
-            </button>
-          </div>
-        </section>
-      )}
+            <span>Tap to Enter</span>
+            <svg viewBox="0 0 24 24" className="h-4 w-4 text-gold-700 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14m-6-6 6 6-6 6" />
+            </svg>
+          </button>
+        </div>
+      </section>
     </div>
   );
 }
